@@ -6,7 +6,7 @@ A dynamic hotel room reservation system built as part of the SDE-3 assessment. T
 🔗 [hotel-reservation-system-pied.vercel.app](https://hotel-reservation-system-pied.vercel.app)
 
 ## 📂 Repository
-🔗 [GitHub Repository](https://github.com/your-username/your-repo) *(replace with your actual repo link)*
+🔗 [GitHub Repository](https://github.com/HarshitaNahata/hotel-reservation-system) 
 
 ---
 
