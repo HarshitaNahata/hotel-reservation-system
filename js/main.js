@@ -10,15 +10,16 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('bookBtn').addEventListener('click', () => {
         const numRooms = parseInt(document.getElementById('numRooms').value);
         const roomsToBook = bookingSystem.findOptimalRooms(numRooms);
-
         if (roomsToBook.length === numRooms) {
             hotel.bookRooms(roomsToBook);
-            visualizer.render();
+            visualizer.render(roomsToBook); // Pass booked rooms for highlight
             showTravelTime(roomsToBook);
+            showUserMessage(`Successfully booked rooms: ${roomsToBook.join(', ')}`, 'success');
         } else {
-            alert(`Only ${roomsToBook.length} rooms available!`);
+            showUserMessage(`Only ${roomsToBook.length} rooms available!`, 'error');
         }
     });
+
 
     document.getElementById('randomBtn').addEventListener('click', () => {
         hotel.generateRandomOccupancy();
@@ -42,3 +43,9 @@ document.addEventListener('DOMContentLoaded', () => {
             `Total travel time between first and last room: ${totalTime} minutes`;
     }
 });
+function showUserMessage(msg, type = 'success') {
+    const el = document.getElementById('userMessage');
+    el.textContent = msg;
+    el.style.color = (type === 'success') ? 'green' : 'red';
+    setTimeout(() => { el.textContent = ''; }, 3000);
+}
