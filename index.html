@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Reservation System</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Hotel Room Reservation System</h1>
+
+        <div class="controls">
+            <input type="number" id="numRooms" min="1" max="5" value="1">
+            <button id="bookBtn">Book Rooms</button>
+            <button id="randomBtn">Random Occupancy</button>
+            <button id="resetBtn">Reset All</button>
+        </div>
+
+        <div id="hotelVisualization"></div>
+        <div id="travelTime"></div>
+    </div>
+
+    <script src="js/hotelModel.js"></script>
+    <script src="js/bookingAlgorithm.js"></script>
+    <script src="js/visualization.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
